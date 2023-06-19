@@ -1,0 +1,348 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/sample_bg"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="top"
+        android:orientation="vertical"
+        >
+
+        <ImageView
+            android:id="@+id/logo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/logo_2"
+            android:padding="5dp"
+            android:layout_gravity="center"
+            />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:layout_marginTop="5dp"
+            >
+
+            <androidx.viewpager.widget.ViewPager
+                android:id="@+id/viewPager"
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                android:background="@drawable/circle_background"
+                android:layout_margin="5dp"
+                />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                tools:context=".MainActivity">
+
+                <FrameLayout
+                    android:id="@+id/liveCamera"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="10dp"
+                    android:background="@drawable/background_lining"
+                    android:layout_gravity="center"
+                    >
+
+                    <SurfaceView
+                        android:id="@+id/surface_view"
+                        android:layout_width="300dp"
+                        android:layout_height="500dp"
+                        android:layout_gravity="center"
+                        />
+
+                    <com.example.pocketherbs.SquareOverlayView
+                        android:layout_width="300dp"
+                        android:layout_height="500dp"
+                        android:layout_gravity="center"
+                        />
+
+                </FrameLayout>
+
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="match_parent"
+                android:layout_height="300sp"
+                android:layout_centerHorizontal="true"
+                android:src="@drawable/plant_sample"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:background="@drawable/design_background"
+                android:padding="5dp"
+                android:visibility="gone"
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linearPlantChar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:gravity="center"
+            android:padding="5dp"
+            android:visibility="gone">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:background="@drawable/design_background"
+                android:padding="5dp"
+                >
+                <TextView
+                    android:id="@+id/classified"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Classified as:"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/loadingScreenTitleCol"
+                    />
+
+                <TextView
+                    android:id="@+id/result"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="PLANT NAME"
+                    android:textColor="@color/buttonColor"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    />
+
+                <TextView
+                    android:id="@+id/uses"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/uses"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/loadingScreenTitleCol"
+                    />
+
+                <TextView
+                    android:id="@+id/usesTxt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="leaf uses"
+                    android:textSize="15sp"
+                    android:textColor="@color/buttonColor"
+                    android:textAlignment="center"
+                    />
+            </LinearLayout>
+
+            <Space
+                android:layout_width="5dp"
+                android:layout_height="match_parent"/>
+
+            <LinearLayout
+                android:id="@+id/linearPlantType"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:background="@drawable/design_background"
+                android:padding="5dp"
+                >
+
+                <TextView
+                    android:id="@+id/leaveType"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/leaveType"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/loadingScreenTitleCol"
+                    />
+
+                <TextView
+                    android:id="@+id/leaveTypeTxt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="leaf Type"
+                    android:textSize="15sp"
+                    android:textColor="@color/buttonColor"
+                    android:textAlignment="center"
+                    />
+
+                <TextView
+                    android:id="@+id/leafShape"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/leafShape"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/loadingScreenTitleCol"
+                    />
+
+                <TextView
+                    android:id="@+id/leafShapeTxt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="leaf shape"
+                    android:textSize="15sp"
+                    android:textColor="@color/buttonColor"
+                    android:textAlignment="center"
+                    />
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linearPlantDesc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="5dp"
+            android:layout_marginBottom="5dp"
+            android:background="@drawable/design_background"
+            android:orientation="vertical"
+            android:visibility="gone"
+            >
+
+            <TextView
+                android:id="@+id/descriptionTxt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="@string/descriptionTxt"
+                android:textColor="@color/loadingScreenTitleCol"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/description"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:justificationMode="inter_word"
+                android:text="PLANT DESCRIPTION"
+                android:textAlignment="center"
+                android:textColor="@color/buttonColor"
+                android:textSize="15sp" />
+
+
+        </LinearLayout>
+
+        <Button
+            android:layout_gravity="center"
+            android:id="@+id/howToUsePlantBtn"
+            style="@style/tryAgainButtonTextStyle"
+            android:text="How to use"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            >
+
+            <Button
+                android:layout_gravity="center"
+                android:id="@+id/tryAgnBtn"
+                style="@style/tryAgainButtonTextStyle"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                />
+
+            <Space
+                android:layout_width="5dp"
+                android:layout_height="match_parent"
+                />
+
+            <Button
+                android:layout_gravity="center"
+                android:id="@+id/confiBtn"
+                style="@style/confiButtonTextStyle"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            >
+
+            <Button
+                android:id="@+id/button_open_camera"
+                style="@style/captureButtonTextStyle"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                />
+
+            <Space
+                android:layout_width="5dp"
+                android:layout_height="match_parent"
+                />
+
+            <Button
+                android:layout_gravity="center"
+                android:id="@+id/button2"
+                style="@style/galleryButtonTextStyle"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            >
+
+            <Button
+                android:layout_gravity="center"
+                android:id="@+id/button"
+                style="@style/captureButtonTextStyle"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                />
+
+            <Space
+                android:layout_width="5dp"
+                android:layout_height="match_parent"
+                />
+
+            <Button
+                android:id="@+id/button_take_picture"
+                style="@style/captureButtonTextStyle"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:text="Capture"
+                android:layout_gravity="center"
+                />
+
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>

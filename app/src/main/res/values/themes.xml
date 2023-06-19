@@ -1,0 +1,108 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.PocketHerbs" parent="Theme.Material3.Light">
+        <!-- Customize your light theme here. -->
+        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+        <item name="actionBarStyle">@style/CustomActionBar</item>
+    </style>
+
+    <style name="Theme.PocketHerbs" parent="Base.Theme.PocketHerbs" />
+
+    <style name="tutorialFragmentAnimation">
+
+        <item name="android:windowEnterAnimation">@android:anim/fade_in</item>
+        <item name="android:windowExitAnimation">@android:anim/fade_out</item>
+
+    </style>
+
+    <style name="titleFontStyle">
+        <item name="android:textSize">40sp</item>
+        <item name="android:text">@string/appName</item>
+        <item name="android:textColor">@color/loadingScreenTitleCol</item>
+        <item name="android:fontFamily">@font/mochiy</item>
+    </style>
+
+    <style name="homeButtonTextStyle">
+        <item name="android:backgroundTint">@color/buttonColor</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:width">178dp</item>
+        <item name="android:height">160dp</item>
+        <item name="android:radius">8dp</item>
+        <item name="android:textSize">20sp</item>
+    </style>
+
+    <style name="copyRightTextStyle">
+        <item name="android:text">@string/copyRight</item>
+        <item name="android:textSize">10sp</item>
+    </style>
+
+    <style name="tryAgainButtonTextStyle">
+        <item name="android:backgroundTint">@color/buttonColor</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:width">260dp</item>
+        <item name="android:height">50dp</item>
+        <item name="android:radius">8dp</item>
+        <item name="android:textSize">15sp</item>
+        <item name="android:text">@string/tryAgnTxt</item>
+    </style>
+
+    <style name="okErrorButtonTextStyle">
+        <item name="android:backgroundTint">@color/buttonColor</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:width">260dp</item>
+        <item name="android:height">50dp</item>
+        <item name="android:radius">8dp</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:text">@string/okErrorTxt</item>
+    </style>
+
+    <style name="confiButtonTextStyle">
+        <item name="android:backgroundTint">@color/buttonColor</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:width">260dp</item>
+        <item name="android:height">50dp</item>
+        <item name="android:radius">8dp</item>
+        <item name="android:textSize">15sp</item>
+        <item name="android:text">@string/confiTxt</item>
+    </style>
+
+    <style name="captureButtonTextStyle">
+        <item name="android:backgroundTint">@color/buttonColor</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:width">260dp</item>
+        <item name="android:height">50dp</item>
+        <item name="android:radius">8dp</item>
+        <item name="android:textSize">15sp</item>
+        <item name="android:text">@string/takeAPic</item>
+    </style>
+
+    <style name="galleryButtonTextStyle">
+        <item name="android:backgroundTint">@color/buttonColor</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:width">260dp</item>
+        <item name="android:height">50dp</item>
+        <item name="android:radius">8dp</item>
+        <item name="android:textSize">15sp</item>
+        <item name="android:text">@string/galleryTxt</item>
+    </style>
+
+    <style name="CustomActionBar" parent="Widget.AppCompat.ActionBar">
+        <item name="android:background">@color/loadingScreenTitleCol</item>
+        <!-- Add more customization attributes if needed -->
+    </style>
+
+    <style name="CustomProgressBarStyle" parent="@android:style/Widget.ProgressBar.Horizontal">
+        <item name="android:progressDrawable">@drawable/custom_progress_bar</item>
+    </style>
+
+    <style name="testButtonTextStyle">
+        <item name="android:backgroundTint">@color/buttonColor</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:width">260dp</item>
+        <item name="android:height">50dp</item>
+        <item name="android:radius">8dp</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:text">@string/testTxt</item>
+    </style>
+
+</resources>

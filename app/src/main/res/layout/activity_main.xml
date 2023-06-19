@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:layout_gravity="center"
+    android:paddingTop="50dp"
+    android:paddingBottom="50dp"
+    tools:context=".MainActivity"
+    android:background="@drawable/sample_bg"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center"
+        >
+
+        <ImageView android:id="@+id/imageView"
+            android:layout_width="90dp"
+            android:layout_height="90dp"
+            app:layout_constraintEnd_toStartOf="@+id/textView2"
+            app:srcCompat="@drawable/sample_icon" />
+
+        <TextView android:id="@+id/textView2"
+            style="@style/titleFontStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            />
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="50dp"/>
+
+        <Button android:id="@+id/startButton"
+            style="@style/homeButtonTextStyle"
+            android:layout_width="300dp"
+            android:layout_height="60dp"
+            android:text="KNN"
+            />
+
+        <Button android:id="@+id/cnnButton"
+            style="@style/homeButtonTextStyle"
+            android:layout_width="300dp"
+            android:layout_height="60dp"
+            android:text="CNN"
+            />
+
+        <Button android:id="@+id/howToUseButton"
+            style="@style/homeButtonTextStyle"
+            android:layout_width="300dp"
+            android:layout_height="60dp"
+            android:text="@string/howToUseButton"
+            />
+
+        <Button android:id="@+id/aboutButton"
+            style="@style/homeButtonTextStyle"
+            android:layout_width="300dp"
+            android:layout_height="60dp"
+            android:text="@string/aboutUs"
+            />
+
+        <Button android:id="@+id/exitButton"
+            style="@style/homeButtonTextStyle"
+            android:layout_width="300dp"
+            android:layout_height="60dp"
+            android:text="@string/exit"
+            />
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="20dp"/>
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_gravity="center"
+        >
+
+        <ImageView android:id="@+id/copyRightLogo"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:alpha="0.5"
+            app:srcCompat="@drawable/all_right_reserve" />
+
+        <Space
+            android:layout_width="10dp"
+            android:layout_height="match_parent"/>
+
+        <TextView android:id="@+id/textView4"
+            style="@style/copyRightTextStyle"
+            android:textAlignment="center"
+            android:textSize="20sp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            />
+
+    </LinearLayout>
+
+
+</LinearLayout>

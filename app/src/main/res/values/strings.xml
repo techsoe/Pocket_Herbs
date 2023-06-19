@@ -1,0 +1,140 @@
+<resources>
+    <string name="app_name">Pocket Herbs</string>
+    <string name="appName">Pocket Herbs</string>
+    <string name="start">Start</string>
+    <string name="insert">Insert from gallery</string>
+    <string name="howToUseButton">User\'s Guide</string>
+    <string name="rateUs">Rate Us</string>
+    <string name="aboutUs">About Us</string>
+    <string name="exit">Exit</string>
+    <string name="copyRight">copyright all rights reserved</string>
+    <string name="takeAPic">Take a picture</string>
+    <string name="galleryTxt">Launch gallery</string>
+    <string name="descriptionTxt">Description</string>
+    <string name="confiTxt">Confidences</string>
+    <string name="tryAgnTxt">Try Again</string>
+
+    <string name="leaveType">Type:</string>
+    <string name="uses">Uses:</string>
+    <string name="leafShape">Shape:</string>
+
+    <string name="okErrorTxt">OK</string>
+
+
+    <string name="menuTxt">1. Pick between KNN or CNN.</string>
+    <string name="captureTxt"><blockquote>2. Pick between "take a picture" or "launch gallery".</blockquote></string>
+    <string name="allowTxt"><blockquote>3. Click "while using the app" or "allow".</blockquote></string>
+    <string name="takePicTxt">4. Take the picture.</string>
+    <string name="doneTxt">5.1 You are done! Just click the "Capture or Launch Gallery" button if you want to take another picture.</string>
+    <string name="doneTxt2">5.2 If you click the "CONFIDENCES" button it will show the percentage of the leaf that matched in our database.</string>
+    <string name="errorTxtTut">6. If the picture you have taken did not match any picture in our database. Just click "OK" button to retry.</string>
+
+    <string name="acapulco">Acapulco</string>
+    <string name="amplaya">Ampalaya</string>
+    <string name="bayabas">Bayabas</string>
+    <string name="katakataka">Kataka-taka</string>
+    <string name="lagundi">Lagundi</string>
+    <string name="oregano">Oregano</string>
+    <string name="sambong">Sambong</string>
+    <string name="error">Unknown</string>
+
+    <string name="acapulDesc">
+        The scientific name for akapulko is Cassia alata or Senna alata, sometimes known as ringworm bush. It is essentially a shrub that goes by many names depending on the region in the Philippines. It is also referred to as palochina or katanda.
+        Akapulko infusion is thought to have expectorant and antibacterial properties that can help with coughing. It could ease throat discomfort, clear up phlegm, and lessen respiratory system irritation.
+    </string>
+    <string name="ampDesc">
+        Remedy for fever, cough, headache, diarrhea, burns, skin diseases and intestinal parasitism; good as blood tonic.
+        Ampalaya is thought to provide cooling effects that might ease headaches, calm the cough, and lower fever.
+    </string>
+    <string name="bayaDesc">
+        It is a phytotherapic plant used in folk medicine that is believed to have active components that help to treat and manage various diseases. The many parts of the plant have been used in traditional medicine to manage conditions like malaria, gastroenteritis, vomiting, diarrhea, dysentery, wounds,ulcers, toothache, coughs, sore throat, or inflamed gums
+    </string>
+    <string name="kataDesc">
+        The plant is considered a sedative wound-healer, diuretic and cough suppressant. The plant is also employed for the treatment of kidney stones, gastric ulcer and edema of legs.
+    </string>
+    <string name="lagunDesc">
+        Lagundi is used in treating asthma, cough and colds, fever, dysentery, pain, skin diseases (scabies, ulcer, eczema), and wounds as perceived by the Batangueños and interpreted as to a very great extent. Given that the respondents live in a rural place, they are more prone to have asthma, cough and colds, fever and skin diseases.
+    </string>
+    <string name="oregaDesc">
+        Oregano leaves are used in traditional medicine for the treatment of common cold based in their bronchodilator and expectorant activities. The current findings corroborate those achieved in previous preclinical studies with this extract.
+    </string>
+    <string name="sambDesc">
+        In Ayurveda, Sambong is known as kakoranda and is used to treat fevers, coughs, aches, and rheumatism. Leaf extracts are directly applied to treat eczema, dermatitis, skin injury, bruises, beriberi, lumbago, menorrhagia, rheumatism, and skin injury.
+    </string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string name="scanningTxt">Scanning</string>
+    <string name="testTxt">Test</string>
+
+    <string name="acapulUse">
+        1.) Find a healthy Akapulko plant
+        \n2.) Cleaning the Leaves. After collecting the leaves, properly wash them in clean water.
+        \n3.) Spread the leaves out into the sun to dry them. Till they are crisp and brittle.
+        \n4.) Grind them until they turn into a fine powder.
+        \n5.) Make an akapulko tea is as simple as adding 1 to 2 tablespoons of powdered akapulko leaves to a cup of boiling water.
+        \n6.) Straining the Akapulko Tea. After the infusion has simmered, turn off the heat and strain it through a clean piece of cloth.
+        \n7.) Sipped slowly so that it can coat the throat.
+    </string>
+
+    <string name="ampUse">
+        1.) Wash the leaves with clean water.
+        \n2.) Lightly crush the leaves. In a kettle, boil 2 cups of water.
+        \n3.) Add the leaves to the pot once it reach its rolling boil.
+        \n4.) Let the leaves swim for 10 to 15 minutes.
+        \n5.) Turn off the heat and allow the mixture to cool.
+        \n6.) Separate the liquid extract from the Lagundi leaves.
+
+    </string>
+
+    <string name="bayaUse">
+        1.) Wash the leaves with clean water.
+        \n2.) In a kettle, boil two cups of water.
+        \n3.) Add the washed guava leaves to the pot once the water has reached a rolling boil.
+        \n4.) For 10 to 15 minutes, let the guava leaves simmer in the boiling water.
+        \n5.) Turn off the heat and allow the mixture to cool.
+        \n6.) To separate the liquid extract, strain the guava leaves from the water using a fine sieve or cloth.
+        \n7.) The finished guava leaf extract is now prepared for tea consumption.
+    </string>
+
+    <string name="kataUse">
+        1.) Wash the leaves with clean water.
+        \n2.) In a kettle, boil two cups of water.
+        \n3.) Add the washed katakataka leaves to the pot once the water has reached a rolling boil.
+        \n4.) For 10 to 15 minutes, let the katakataka leaves simmer in the boiling water.
+        \n5.) Turn off the heat and allow the mixture to cool.
+        \n6.) To separate the liquid extract, strain the katakataka leaves from the water using a fine sieve or cloth
+        \n7.) The finished guava leaf extract is now prepared for tea consumption.
+    </string>
+
+    <string name="lagunlUse">
+        1.) Wash the leaves with clean water.
+        \n2.) Take a handful of the freshly washed Lagundi leaves and lightly crush them. In a kettle, boil two cups of water.
+        \n3.) Add the crushed Lagundi leaves to the pot once the water has reached a rolling boil.
+        \n4.) For 10 to 15 minutes, let the lagundi leaves simmer in the boiling water.
+        \n5.) Turn off the heat and allow the mixture to cool.
+        \n6.) To separate the liquid extract from the Lagundi leaves, strain the mixture through a clean cloth
+
+    </string>
+
+    <string name="oregaUse">
+        1.) Wash the leaves with clean water.
+        \n2.) After collecting the leaves, properly wash them in clean water to get rid of any dirt or debris.
+        \n3.) Spread the leaves out in a single layer on a spotless, dry surface to dry.
+        \n4.) Making an oregano tea involves adding 1 to 2 tablespoons of crushed oregano leaves to a cup of boiling water.
+        \n5.) Straining the Oregano Tea After the infusion has simmered, turn off the heat and strain it through a clean piece of cloth.
+        \n6.) The Oregano tea should be sipped slowly while warm. Depending on your symptoms, you can drink this herbal tea 2 to 3 times each day.
+
+    </string>
+
+    <string name="sambUse">
+        1.) Wash the leaves with clean water.
+        \n2.) To release the sambong leaves chemicals and essential oils, finely chop or smash them.
+        \n3.) In a kettle, boil two cups of water.
+        \n4.) Add the chopped sambong leaves to the pot once the water has boiled.
+        \n5.) For 10 to 15 minutes, let the sambong leaves simmer in the boiling water.
+        \n6.) After the mixture has steeped for an additional five minutes, turn off the heat.
+        \n7.) To separate the liquid extract, strain the sambong leaves from the water using a fine sieve or cloth.
+    </string>
+
+</resources>
