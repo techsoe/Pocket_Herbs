@@ -224,29 +224,22 @@ public class Capture_Gallery extends AppCompatActivity implements SurfaceHolder.
             @Override
             public void onClick(View v) {
                 if (dialogTextView != null && confidences != null) {
-                    int maxIndex = -1;
-                    float maxConfidence = 0.0f;
-
-                    // Find the index of the class with the highest confidence
-                    for (int i = 0; i < confidences.length; i++) {
-                        if (confidences[i] > maxConfidence) {
-                            maxConfidence = confidences[i];
-                            maxIndex = i;
+                    StringBuilder confidenceBuilder = new StringBuilder();
+                    confidenceBuilder.append("");
+                    boolean hasNonZeroConfidence = false;
+                    for (int i = 0; i < confidences.length-1; i++) { // Modified the loop condition
+                        float confidencePercentage = confidences[i] * 100;
+                        confidenceBuilder.append(classes[i]).append(": ").append(String.format("%.2f", confidencePercentage)).append("%\n");
+                        if (confidencePercentage > 0.0f) {
+                            hasNonZeroConfidence = true;
                         }
                     }
-
-                    if (maxIndex != -1) {
-                        // Display the matched class
-                        String matchedClass = classes[maxIndex];
-                        float confidencePercentage = maxConfidence * 100;
-                        String confidenceText = String.format("%.2f", confidencePercentage) + "%";
-                        String matchedClassText = matchedClass + ": " + confidenceText;
-
-                        dialogTextView.setText(matchedClassText);
+                    if (hasNonZeroConfidence) {
+                        dialogTextView.setText(confidenceBuilder.toString());
                         mDialog.show();
                     } else {
-                        // Show a toast message indicating no match found
-                        Toast.makeText(Capture_Gallery.this, "No match found", Toast.LENGTH_SHORT).show();
+                        // Show a toast message indicating no confidences other than 0
+                        Toast.makeText(Capture_Gallery.this, "No confidences other than 0", Toast.LENGTH_SHORT).show();
                     }
                 } else {
                     // Show a toast message indicating that the confidences are not available
@@ -509,7 +502,6 @@ public class Capture_Gallery extends AppCompatActivity implements SurfaceHolder.
             // Perform inference and obtain the result
             KNN.Outputs outputs = model.process(inputFeature0);
             TensorBuffer outputFeature0 = outputs.getOutputFeature0AsTensorBuffer();
-
 
             confidences = outputFeature0.getFloatArray();
             int maxPos = -1;

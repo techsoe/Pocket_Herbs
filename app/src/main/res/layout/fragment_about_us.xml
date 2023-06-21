@@ -95,7 +95,7 @@
                 android:layout_height="wrap_content"
                 android:textAlignment="center"
                 android:layout_gravity="center"
-                android:text="Johnvic P. Dugaojo \nFront End Developer \njohnvic.dugaojo@cvsu.edu.ph@gmail.com"/>
+                android:text="Johnvic P. Dugaojo \nFront End Developer \njohnvic.dugaojo@cvsu.edu.ph"/>
 
         </LinearLayout>
 

@@ -224,42 +224,42 @@ public class Cnn extends AppCompatActivity implements SurfaceHolder.Callback{
 
         confiBtn.setVisibility(View.GONE);
         confiBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
             public void onClick(View v) {
                 if (dialogTextView != null && confidences != null) {
-                    int maxIndex = -1;
-                    float maxConfidence = 0.0f;
-
-                    // Find the index of the class with the highest confidence
-                    for (int i = 0; i < confidences.length; i++) {
-                        if (confidences[i] > maxConfidence) {
-                            maxConfidence = confidences[i];
-                            maxIndex = i;
+                    // Calculate the sum of confidences for non-zero classes
+                    float sumConfidences = 0.0f;
+                    int nonZeroCount = 0;
+                    for (int i = 0; i < confidences.length - 1; i++) {
+                        if (confidences[i] > 0.0f) {
+                            sumConfidences += confidences[i];
+                            nonZeroCount++;
                         }
                     }
 
-                    if (maxIndex != -1) {
-                        // Display the matched class
-                        String matchedClass = classes[maxIndex];
-                        float confidencePercentage = Math.min(maxConfidence * 10.0f, 100.0f);
-                        String confidenceText = String.format("%.2f", confidencePercentage) + "%";
-                        String matchedClassText = matchedClass + ": " + confidenceText;
-
-                        dialogTextView.setText(matchedClassText);
-                        mDialog.show();
-                    } else {
-                        // Show a toast message indicating no match found
-                        Toast.makeText(Cnn.this, "No match found", Toast.LENGTH_SHORT).show();
+                    StringBuilder confidenceBuilder = new StringBuilder();
+                    confidenceBuilder.append("");
+                    for (int i = 0; i < confidences.length - 1; i++) {
+                        float confidencePercentage;
+                        if (confidences[i] > 0.0f) {
+                            confidencePercentage = (confidences[i] / sumConfidences) * 100.0f;
+                        } else {
+                            confidencePercentage = 0.0f; // Set confidence to 0 for zero classes
+                        }
+                        if (confidencePercentage < 0) {
+                            confidencePercentage = 0;
+                        }
+                        confidenceBuilder.append(classes[i]).append(": ").append(String.format("%.2f", confidencePercentage)).append("%\n");
                     }
+                    dialogTextView.setText(confidenceBuilder.toString());
+                    mDialog.show();
                 } else {
                     // Show a toast message indicating that the confidences are not available
                     Toast.makeText(Cnn.this, "Confidences not available. Please input/take a picture first.", Toast.LENGTH_SHORT).show();
                 }
 
-
             }
-
         });
+
 
         tryAgnBtn = findViewById(R.id.tryAgnBtn);
         tryAgnBtn.setVisibility(View.GONE);
@@ -465,8 +465,12 @@ public class Cnn extends AppCompatActivity implements SurfaceHolder.Callback{
                     e.printStackTrace();
                 }
             }
+
             handler.post(() -> {
-                scanningText.setText("Scan Complete");
+                // Check if progress bar is finished before showing "Scan Complete" text
+                if (progressBar.getProgress() == 100) {
+                    scanningText.setText("Scan Complete");
+                }
             });
 
             handler.postDelayed(() -> {
@@ -474,6 +478,7 @@ public class Cnn extends AppCompatActivity implements SurfaceHolder.Callback{
             }, 1000);
         }).start();
     }
+
 
     private void applyBlinkingAnimation() {
         Animation animation = new AlphaAnimation(1, 0); // Change alpha from fully visible to invisible
@@ -525,7 +530,7 @@ public class Cnn extends AppCompatActivity implements SurfaceHolder.Callback{
             CNN.Outputs outputs = model.process(inputFeature0);
             TensorBuffer outputFeature0 = outputs.getOutputFeature0AsTensorBuffer();
 
-            confidences = outputFeature0.getFloatArray();
+           confidences = outputFeature0.getFloatArray();
             int maxPos = -1;
             float maxConfidence = 0.0f;
             for (int i = 0; i < confidences.length; i++) {
