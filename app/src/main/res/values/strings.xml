@@ -27,6 +27,7 @@
     <string name="takePicTxt">4. Take the picture.</string>
     <string name="doneTxt">5.1 You are done! Just click the "Capture or Launch Gallery" button if you want to take another picture.</string>
     <string name="doneTxt2">5.2 If you click the "CONFIDENCES" button it will show the percentage of the leaf that matched in our database.</string>
+    <string name="doneTxt3">5.2 If you click the "How to use" button it will show to make a tea from the leaf.</string>
     <string name="errorTxtTut">6. If the picture you have taken did not match any picture in our database. Just click "OK" button to retry.</string>
 
     <string name="acapulco">Acapulco</string>

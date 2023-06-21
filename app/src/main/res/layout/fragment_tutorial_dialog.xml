@@ -126,6 +126,33 @@
                 android:layout_gravity="center"
                 android:src="@drawable/tutorial_7"
                 />
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="50dp" />
+
+            <TextView
+                android:id="@+id/howTo"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="@string/doneTxt3"
+                android:textSize="20sp" />
+
+            <ImageView
+                android:id="@+id/tut_6_3"
+                android:layout_width="match_parent"
+                android:layout_height="600dp"
+                android:layout_gravity="center"
+                android:src="@drawable/tutorial_6_3"
+                />
+
+            <ImageView
+                android:id="@+id/tut_6_4"
+                android:layout_width="match_parent"
+                android:layout_height="600dp"
+                android:layout_gravity="center"
+                android:src="@drawable/how_to_result"
+                />
+
 
             <Space
                 android:layout_width="match_parent"
